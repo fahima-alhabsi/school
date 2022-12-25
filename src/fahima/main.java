@@ -39,11 +39,11 @@ public class main {
 		boolean condition = true;
 		
 		
-		boolean optional = true;
+		
 		boolean choosen = true;
 		
 		boolean press = true;
-		boolean studentID= true;
+		
 		// i put all booleans up same place
 		{
 		
@@ -73,7 +73,7 @@ public class main {
 						
 						
 						
-						
+						boolean optional = true;
 						while (optional) {
 							System.out.println("enter Student name");
 							String studnt = scanner.next();
