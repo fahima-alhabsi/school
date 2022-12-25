@@ -37,11 +37,11 @@ public class main {
 		ArrayList<Mark> marklist = new ArrayList<Mark>();
 		Mark mark = new Mark();
 		boolean condition = true;
-		boolean option = true;
+		
 		boolean choose = true;
 		boolean optional = true;
 		boolean choosen = true;
-		boolean de;
+		
 		boolean press = true;
 		boolean studentID= true;
 		// i put all booleans up same place
@@ -55,8 +55,7 @@ public class main {
 				muscat.setName(name);
 				schoolelist.add(muscat);
 
-				
-				
+				boolean option = true;
 				while (option) {
 					System.out.println("enter Department name");
 					String dep = scanner.next();
