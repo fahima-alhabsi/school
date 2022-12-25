@@ -7,7 +7,9 @@ import java.util.ArrayList;
 
 
 public class school {
-	
+	school(){
+		System.out.println("welcome fahima");
+	}
 	private int numberOfClasses;
 	private String Name;
 	private String Loction;
@@ -74,15 +76,5 @@ public class school {
 
 
 		
-
-
-
-
-		
-	
-		
-		
-	
-	
 
 

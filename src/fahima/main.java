@@ -8,23 +8,19 @@ public class main {
 	
 	public static void main(String[] args) {
 
-	
 		
+		
+		
+
 		Scanner scanner = new Scanner(System.in);
-
+		
 		ArrayList<school> schoolelist = new ArrayList<school>();
-
 		school muscat = new school();
+		
 
 		
 		ArrayList<Department> departmentList = new ArrayList<Department>();
 		Department department = new Department();
-		
-		
-		
-		
-		
-		
 		
 		ArrayList<Teacher> teacherlist = new ArrayList<Teacher>();
 		Teacher teacher = new Teacher();
@@ -36,13 +32,10 @@ public class main {
 		
 		ArrayList<Mark> marklist = new ArrayList<Mark>();
 		Mark mark = new Mark();
+		
+	
 		boolean condition = true;
 		
-		
-		
-		
-		
-		boolean press = true;
 		
 		// i put all booleans up same place
 		{
@@ -88,7 +81,7 @@ public class main {
 								course.setName(cours);
 								courselist.add(course);
 						
-								
+								boolean press = true;
 								while (press) {
 									System.out.println("enter Subject name");
 						     		String marks = scanner.next();
