@@ -40,7 +40,7 @@ public class main {
 		
 		
 		
-		boolean choosen = true;
+		
 		
 		boolean press = true;
 		
@@ -81,7 +81,7 @@ public class main {
 							studentlist.add(student);
 							
 						
-						
+							boolean choosen = true;
 							while (choosen) {
 								System.out.println("enter Course name");
 								String cours = scanner.next();
