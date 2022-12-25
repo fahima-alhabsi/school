@@ -3,12 +3,15 @@ package fahima;
 import java.util.ArrayList;
 
 public class Department {
+	
+	
+	Department(){
+		System.out.println("Hello HR");
+	}
 	private int noOfTeachers;
 	private int ID;
 	private String name;
 	int teacherlistlength;
-	
-	
 	
 	
 	Teacher teacher= new Teacher();
@@ -24,10 +27,7 @@ public class Department {
 	
 	
 	
-	
-	
-	
-	
+
 
 
 	public int getNoOfTeachers() {

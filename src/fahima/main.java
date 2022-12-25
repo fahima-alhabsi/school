@@ -8,15 +8,13 @@ public class main {
 	
 	public static void main(String[] args) {
 
+	
 		
-		
-		
-
 		Scanner scanner = new Scanner(System.in);
-		
+
 		ArrayList<school> schoolelist = new ArrayList<school>();
+
 		school muscat = new school();
-		
 
 		
 		ArrayList<Department> departmentList = new ArrayList<Department>();
@@ -32,22 +30,16 @@ public class main {
 		
 		ArrayList<Mark> marklist = new ArrayList<Mark>();
 		Mark mark = new Mark();
-		
-	
 		boolean condition = true;
-		
-		
-		// i put all booleans up same place
 		{
 		
-			
-			
 		
 				System.out.println("enter school name");
 				String name = scanner.next();
 				muscat.setName(name);
 				schoolelist.add(muscat);
 
+				
 				boolean option = true;
 				while (option) {
 					System.out.println("enter Department name");
@@ -55,7 +47,9 @@ public class main {
 					department.setName(dep);
 					departmentList.add(department);
 				
-				
+					
+					
+					
 					
 					boolean choose = true;
 					while (choose) {
@@ -63,6 +57,9 @@ public class main {
 						String tech = scanner.next();
 						teacher.setName(tech);
 						teacherlist.add(teacher);
+						
+						
+						
 						
 						
 						
@@ -74,12 +71,17 @@ public class main {
 							studentlist.add(student);
 							
 						
+							
+							
 							boolean choosen = true;
 							while (choosen) {
 								System.out.println("enter Course name");
 								String cours = scanner.next();
 								course.setName(cours);
 								courselist.add(course);
+
+
+								
 						
 								boolean press = true;
 								while (press) {
@@ -90,7 +92,7 @@ public class main {
 								
 						
 									
-							System.out.print("Do you want to add new subject ? yes/no");
+							System.out.print("Do you want to add new subject? yes/no");
 							String dot = scanner.next();
 							if (dot.equals("yes")) {
 								press = true;
@@ -99,7 +101,7 @@ public class main {
 							else if (dot.equals("no")) {
 							
 							
-								System.out.println("thank you");
+								//System.out.println("thank you");
 								press = false;
 							}
 										
@@ -190,7 +192,6 @@ public class main {
 
 	
 
-	
 	
 	
 	
