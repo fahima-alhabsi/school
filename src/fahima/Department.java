@@ -14,7 +14,7 @@ public class Department {
 	int teacherlistlength;
 	
 	
-	Teacher teacher= new Teacher();
+	Teacher teacher= new Teacher("fahima", 31);
 	
 	
 	ArrayList<Teacher> teacherlist=new ArrayList<Teacher>();
@@ -42,7 +42,7 @@ public class Department {
 	void assginTeacher(int numberOfTeacher) {
 		teacherlistlength = numberOfTeacher;
 		for(int i =0;i<numberOfTeacher;i++) {
-			teacherlist.add(new Teacher());		}
+			teacherlist.add(new Teacher("fahima", 31));		}
 	}
 	
 	

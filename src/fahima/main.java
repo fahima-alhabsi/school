@@ -21,7 +21,7 @@ public class main {
 		Department department = new Department();
 		
 		ArrayList<Teacher> teacherlist = new ArrayList<Teacher>();
-		Teacher teacher = new Teacher();
+		Teacher teacher = new Teacher("fahima",31);
 		ArrayList<student> studentlist = new ArrayList<student>();
 		student student = new student();
 		

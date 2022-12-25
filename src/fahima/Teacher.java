@@ -10,6 +10,11 @@ public  class Teacher {
 	int studentlistlength;
 	
 	
+	
+	Teacher(String name , int age){
+		System.out.println("name: "+name +"  age: "+age);
+	}
+	
 	student student= new student();
 	ArrayList<student> studentlist=new ArrayList<student>();
 	
