@@ -38,7 +38,7 @@ public class main {
 		Mark mark = new Mark();
 		boolean condition = true;
 		
-		boolean choose = true;
+		
 		boolean optional = true;
 		boolean choosen = true;
 		
@@ -64,7 +64,7 @@ public class main {
 				
 				
 					
-					
+					boolean choose = true;
 					while (choose) {
 						System.out.println("enter Teacher name");
 						String tech = scanner.next();
