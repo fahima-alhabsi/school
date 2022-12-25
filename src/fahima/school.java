@@ -25,6 +25,8 @@ public class school {
 		Department department = new Department();
 		
 	ArrayList<Department> departmentList=new ArrayList<Department>();
+	
+	
 
 	void assginDepartment(int numberOfDepartment) {
 		departmentListLength = numberOfDepartment;
@@ -72,6 +74,9 @@ public class school {
 			public void setLoction(String loction) {
 				Loction = loction;
 			}
+			
+			
+			
 }
 
 
