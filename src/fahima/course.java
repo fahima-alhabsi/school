@@ -11,6 +11,18 @@ public class course {
 	
 
 	ArrayList<Mark> marklist=new ArrayList<Mark>();
+	
+	
+
+	public ArrayList<Mark> getMarklist() {
+		return marklist;
+	}
+
+
+	public void setMarklist(ArrayList<Mark> marklist) {
+		this.marklist = marklist;
+	}
+
 
 	void assginMark(int numberOfMark) {
 		Marklistlength = numberOfMark;

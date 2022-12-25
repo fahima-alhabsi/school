@@ -14,6 +14,22 @@ public class student {
 	
 	ArrayList<course> Courselist=new ArrayList<course>();
 	
+	
+	
+	public ArrayList<course> getCourselist() {
+		return Courselist;
+	}
+
+
+
+
+	public void setCourselist(ArrayList<course> courselist) {
+		Courselist = courselist;
+	}
+
+
+
+
 	void assgincourse(int numberOfCourse) {
 		courselistlength = numberOfCourse;
 		for(int i =0;i<numberOfCourse;i++) {

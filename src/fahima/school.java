@@ -28,6 +28,14 @@ public class school {
 	
 	
 
+	public ArrayList<Department> getDepartmentList() {
+		return departmentList;
+	}
+
+	public void setDepartmentList(ArrayList<Department> departmentList) {
+		this.departmentList = departmentList;
+	}
+
 	void assginDepartment(int numberOfDepartment) {
 		departmentListLength = numberOfDepartment;
 		for(int i =0;i<numberOfDepartment;i++) {

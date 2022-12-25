@@ -12,6 +12,15 @@ public  class Teacher {
 	
 	student student= new student();
 	ArrayList<student> studentlist=new ArrayList<student>();
+	
+
+	public ArrayList<student> getStudentlist() {
+		return studentlist;
+	}
+
+	public void setStudentlist(ArrayList<student> studentlist) {
+		this.studentlist = studentlist;
+	}
 
 	void assginstudent(int numberOfStudent) {
 		studentlistlength = numberOfStudent;

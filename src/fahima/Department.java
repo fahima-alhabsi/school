@@ -18,6 +18,26 @@ public class Department {
 	
 	
 	ArrayList<Teacher> teacherlist=new ArrayList<Teacher>();
+	
+	
+
+	public ArrayList<Teacher> getTeacherlist() {
+		return teacherlist;
+	}
+
+
+
+
+
+
+	public void setTeacherlist(ArrayList<Teacher> teacherlist) {
+		this.teacherlist = teacherlist;
+	}
+
+
+
+
+
 
 	void assginTeacher(int numberOfTeacher) {
 		teacherlistlength = numberOfTeacher;

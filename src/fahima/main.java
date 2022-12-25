@@ -17,7 +17,7 @@ public class main {
 		school muscat = new school();
 
 		
-		ArrayList<Department> departmentList = new ArrayList<Department>();
+		//ArrayList<Department> departmentList = new ArrayList<Department>();
 		Department department = new Department();
 		
 		ArrayList<Teacher> teacherlist = new ArrayList<Teacher>();
@@ -45,7 +45,7 @@ public class main {
 					System.out.println("enter Department name");
 					String dep = scanner.next();
 					department.setName(dep);
-					departmentList.add(department);
+					muscat.departmentList.add(department);
 				
 					
 					
@@ -56,7 +56,7 @@ public class main {
 						System.out.println("enter Teacher name");
 						String tech = scanner.next();
 						teacher.setName(tech);
-						teacherlist.add(teacher);
+						department.teacherlist.add(teacher);
 						
 						
 						
@@ -68,8 +68,8 @@ public class main {
 							System.out.println("enter Student name");
 							String studnt = scanner.next();
 							student.setName(studnt);
-							studentlist.add(student);
 							
+							teacher.studentlist.add(student);
 						
 							
 							
@@ -78,8 +78,8 @@ public class main {
 								System.out.println("enter Course name");
 								String cours = scanner.next();
 								course.setName(cours);
-								courselist.add(course);
-
+								
+                                student.Courselist.add(course);
 
 								
 						
@@ -88,8 +88,8 @@ public class main {
 									System.out.println("enter Subject name");
 						     		String marks = scanner.next();
 									mark.setSubjectName(marks);
-									marklist.add(mark);
-								
+									
+								course.marklist.add(mark);
 						
 									
 							System.out.print("Do you want to add new subject? yes/no");
@@ -162,23 +162,23 @@ public class main {
 					System.out.println("scool name:" + S.getName());
 				
 
-				for (Department D : departmentList) {
+				for (Department D : S.getDepartmentList()) {
 					System.out.println("department name:" + D.getName());
 				
 
-				for (Teacher T : teacherlist) {
+				for (Teacher T : D.getTeacherlist()) {
 					System.out.println("teacher name:" + T.getName());
 				
 
-				for (student Ss : studentlist) {
+				for (student Ss : T.getStudentlist()) {
 					System.out.println("student name:" + Ss.getName());
 				
 
-				for (course C : courselist) {
+				for (course C : Ss.getCourselist()) {
 					System.out.println("course name:" + C.getName());
 				
 
-				for (Mark M : marklist) {
+				for (Mark M : C.getMarklist()) {
 					System.out.println("subject name:" + M.getSubjectName());
 				}
 
