@@ -10,7 +10,7 @@ public class course {
 	Mark mark =new Mark();
 	
 
-	ArrayList<Mark> marklist=new ArrayList<Mark>();
+	ArrayList<Mark> marklist=new ArrayList<>();
 	
 	
 
@@ -54,6 +54,7 @@ public class course {
 	}
 	public int getMarkes() {
 		return markes;
+
 	}
 	public void setMarkes(int markes) {
 		this.markes = markes;

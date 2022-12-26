@@ -17,7 +17,7 @@ public class Department {
 	Teacher teacher= new Teacher("fahima", 31);
 	
 	
-	ArrayList<Teacher> teacherlist=new ArrayList<Teacher>();
+	ArrayList<Teacher> teacherlist=new ArrayList<>();
 	
 	
 

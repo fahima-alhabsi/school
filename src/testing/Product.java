@@ -5,22 +5,28 @@ public class Product {
 	
 	
 	private String productName;
-	private int productCode;
+	private double noOfProducts;
 	
 	
 	
 	
-	public String getProductName() {
+	
+	public String getproductName() {
 		return productName;
 	}
-	public void setProductName(String productName) {
+	public void setproductName(String productName) {
 		this.productName = productName;
 	}
-	public int getProductCode() {
-		return productCode;
+	public double getProductCode() {
+		return noOfProducts;
+	
 	}
-	public void setProductCode(int productCode) {
-		this.productCode = productCode;
+	public void setProductCode(int noOfProducts) {
+		this.noOfProducts = (double)noOfProducts;
+		
+		
+		
+		
 	}
 	
 	

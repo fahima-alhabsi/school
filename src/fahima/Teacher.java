@@ -13,10 +13,10 @@ public  class Teacher {
 	
 	Teacher(String name , int age){
 		System.out.println("name: "+name +"  age: "+age);
-	}
+		}
 	
 	student student= new student();
-	ArrayList<student> studentlist=new ArrayList<student>();
+	ArrayList<student> studentlist=new ArrayList<>();
 	
 
 	public ArrayList<student> getStudentlist() {

@@ -12,7 +12,7 @@ public class student {
 	
 	course course = new course();
 	
-	ArrayList<course> Courselist=new ArrayList<course>();
+	ArrayList<course> Courselist=new ArrayList<>();
 	
 	
 	

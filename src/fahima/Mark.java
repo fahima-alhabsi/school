@@ -18,6 +18,7 @@ public class Mark {
 	
 	public String getSubjectName() {
 		return subjectName;
+		
 	}
 	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;

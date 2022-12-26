@@ -1,7 +1,7 @@
 package fahima;
 
 import java.util.Scanner;
-
+import java.util.Stack;
 import java.util.ArrayList;
 
 public class main {
@@ -13,13 +13,13 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 
 		ArrayList<school> schoolelist = new ArrayList<school>();
-
 		school muscat = new school();
 
 		
-		//ArrayList<Department> departmentList = new ArrayList<Department>();
+		ArrayList<Department> departmentList = new ArrayList<Department>();
 		Department department = new Department();
-		
+		Stack<String> st = new Stack();
+	
 		ArrayList<Teacher> teacherlist = new ArrayList<Teacher>();
 		Teacher teacher = new Teacher("fahima",31);
 		ArrayList<student> studentlist = new ArrayList<student>();
@@ -88,8 +88,10 @@ public class main {
 									System.out.println("enter Subject name");
 						     		String marks = scanner.next();
 									mark.setSubjectName(marks);
-									
+									st.push(marks);
 								course.marklist.add(mark);
+								
+								
 						
 									
 							System.out.print("Do you want to add new subject? yes/no");
@@ -105,10 +107,8 @@ public class main {
 								press = false;
 							}
 										
-						
 								
-						
-								
+							
 							
 							}//Subject
 								System.out.println("Do you want to add new Course? yes/no");
@@ -181,17 +181,27 @@ public class main {
 				for (Mark M : C.getMarklist()) {
 					System.out.println("subject name:" + M.getSubjectName());
 				}
+				
+		
+					
+						
+					
+				}
 
 			}}}}}
 
 									
-								
-									
-								
-			}}}
+	
+		for (int i = 0; i <=st.size(); i++) {
+			System.out.println(	st.pop());
+		
+			
+		}
+		
+	
+	
+	}}
 
 	
 
-	
-	
 	

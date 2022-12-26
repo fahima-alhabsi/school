@@ -1,5 +1,6 @@
 package fahima;
 import java.util.HashSet;
+import java.util.Stack;
 import java.util.ArrayList;
 
 
@@ -8,8 +9,8 @@ import java.util.ArrayList;
 
 public class school {
 	school(){
-		System.out.println("welcome fahima");
-	}
+		System.out.println("welcome fahima lets add our first school");
+}
 	private int numberOfClasses;
 	private String Name;
 	private String Loction;
@@ -24,8 +25,8 @@ public class school {
 	
 		Department department = new Department();
 		
-	ArrayList<Department> departmentList=new ArrayList<Department>();
-	
+	ArrayList<Department> departmentList=new ArrayList<>();
+
 	
 
 	public ArrayList<Department> getDepartmentList() {
@@ -61,6 +62,7 @@ public class school {
 
 			public int getNumberOfClasses() {
 				return numberOfClasses;
+				
 			}
 
 			public void setNumberOfClasses(int numberOfClasses) {
