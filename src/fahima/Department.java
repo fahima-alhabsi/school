@@ -14,7 +14,7 @@ public class Department {
 	int teacherlistlength;
 	
 	
-//	Teacher teacher= new Teacher("fahima", 31);
+Teacher teacher= new Teacher("fahima", 31);
 	
 	
 	ArrayList<Teacher> teacherlist=new ArrayList<>();
