@@ -1,6 +1,0 @@
-school name:  muscat
-department name:  it
-teacher name:  fatma
-student name:  sahima
-course name:  java
-subject name:  math

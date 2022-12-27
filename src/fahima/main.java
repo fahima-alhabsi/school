@@ -8,27 +8,47 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 public class main {
 	
 
 
-	public static void main(String[] args) throws IOException  {
+	public static void main(String[] args) throws IOException, ClassNotFoundException  {
 		
 		File ff = new File("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
-		
-		
-		
-
-		
 		FileWriter FW = new FileWriter("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
-		//FW.write("hgrfghfudghfduighfduig");
-		//BufferedWriter BW = new BufferedWriter(FW);
 		
+		Mark subjectMark= new Mark();
 		
+		FileOutputStream FOS = new FileOutputStream(new File("myObjects.txt"));
+		ObjectOutputStream ObjS = new ObjectOutputStream(FOS);
+
+		// Write objects to file
+		ObjS.writeObject(subjectMark);
+
+		ObjS.close();
+		FOS.close();
+
+		FileInputStream FIS = new FileInputStream(new File("myObjects.txt"));
+		ObjectInputStream ObjIS = new ObjectInputStream(FIS);
+
+		// Read objects
+		Mark pr1 = (Mark) ObjIS.readObject();
+		pr1.setSubjectName("math");
+		System.out.println(pr1.getSubjectName());
+
+		ObjIS.close();
+		FIS.close();
 
 
 
-Scanner scanner = new Scanner(System.in);
+       Scanner scanner = new Scanner(System.in);
 		
 
 		ArrayList<school> schoolelist = new ArrayList<school>();
@@ -178,7 +198,7 @@ Scanner scanner = new Scanner(System.in);
 				
 					
 				for (school S : schoolelist) {
-					System.out.println("scool name:" + S.getName());
+					System.out.println("school name:" + S.getName());
 				FW.write("school name:  " + S.getName()+ "\n");
 
 				for (Department D : S.getDepartmentList()) {
