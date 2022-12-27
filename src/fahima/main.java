@@ -1,206 +1,184 @@
 package fahima;
 
 import java.util.Scanner;
-import java.util.Stack;
+
 import java.util.ArrayList;
 
 public class main {
-	
+
 	public static void main(String[] args) {
 
-	
-		
-		Scanner scanner = new Scanner(System.in);
 
-		ArrayList<school> schoolelist = new ArrayList<school>();
-		school muscat = new school();
+Scanner s = new Scanner(System.in);
 
-		
-		ArrayList<Department> departmentList = new ArrayList<Department>();
-		Department department = new Department();
-		Stack<String> st = new Stack();
-	
-		ArrayList<Teacher> teacherlist = new ArrayList<Teacher>();
-		Teacher teacher = new Teacher("fahima",31);
-		ArrayList<student> studentlist = new ArrayList<student>();
-		student student = new student();
-		
-		ArrayList<course> courselist = new ArrayList<course>();
-		course course = new course();
-		
-		ArrayList<Mark> marklist = new ArrayList<Mark>();
-		Mark mark = new Mark();
-		boolean condition = true;
-		{
-		
-		
-				System.out.println("enter school name");
-				String name = scanner.next();
-				muscat.setName(name);
-				schoolelist.add(muscat);
+		ArrayList<school> schoolList = new ArrayList<>();
+		school sobj = new school();
+		int schI = 0;
+		boolean schFlag = true;
+System.out.println("hi");
+		while (schFlag) {
+			System.out.println("first department");
+			ArrayList<Department> departmentList = new ArrayList<>();
+			Department depobj = new Department();
+			boolean depFlag = true;
+			int depI = 0;
 
+			schoolList.add(sobj);
+			school sclo = schoolList.get(schI);
+			System.out.println("pls enter a school name ?");
+sclo.setName(s.nextLine());
+//sclo.setLoction(s.nextLine());
+//sclo.setNumberOfClasses(s.nextInt());
+//s.nextLine();
+			while (depFlag) {
+				System.out.println("first teacher");
+				ArrayList<Teacher> teacherlist = new ArrayList<>();
+				Teacher techobj = new Teacher();
+				boolean teacherFlag = true;
+				int teaI = 0;
+				departmentList.add(depobj);
+				sclo.setDepartmentList(departmentList);
+				Department dplo = sclo.getDepartmentList().get(depI);
 				
-				boolean option = true;
-				while (option) {
-					System.out.println("enter Department name");
-					String dep = scanner.next();
-					department.setName(dep);
-					muscat.departmentList.add(department);
+				System.out.println("pls enter a  department name ?");
+				dplo.setName(s.nextLine());
 				
+				
+				
+				while (teacherFlag) {
+					System.out.println("first Student");
+					ArrayList<student> studentlist = new ArrayList<>();
+					student stdobj = new student();
+					int stuI = 0;
+					boolean stuFlag = true;
+					teacherlist.add(techobj);
+					dplo.setTeacherlist(teacherlist);
+					Teacher techlo = dplo.getTeacherlist().get(schI);
+					
+					System.out.println("pls enter a  teacher name ?");
+					techlo.setName(s.nextLine());
 					
 					
 					
-					
-					boolean choose = true;
-					while (choose) {
-						System.out.println("enter Teacher name");
-						String tech = scanner.next();
-						teacher.setName(tech);
-						department.teacherlist.add(teacher);
-						
-						
-						
-						
-						
-						
-						boolean optional = true;
-						while (optional) {
-							System.out.println("enter Student name");
-							String studnt = scanner.next();
-							student.setName(studnt);
-							
-							teacher.studentlist.add(student);
-						
-							
-							
-							boolean choosen = true;
-							while (choosen) {
-								System.out.println("enter Course name");
-								String cours = scanner.next();
-								course.setName(cours);
-								
-                                student.Courselist.add(course);
 
-								
-						
-								boolean press = true;
-								while (press) {
-									System.out.println("enter Subject name");
-						     		String marks = scanner.next();
-									mark.setSubjectName(marks);
-									st.push(marks);
-								course.marklist.add(mark);
-								
-								
-						
-									
-							System.out.print("Do you want to add new subject? yes/no");
-							String dot = scanner.next();
-							if (dot.equals("yes")) {
-								press = true;
-								
-							} 
-							else if (dot.equals("no")) {
-							
-							
-								//System.out.println("thank you");
-								press = false;
-							}
-										
-								
-							
-							
-							}//Subject
-								System.out.println("Do you want to add new Course? yes/no");
-								String Press = scanner.next();
+					while (stuFlag) {
+						System.out.println("first course");
+						ArrayList<course> Courselist = new ArrayList<>();
+						course corobj = new course();
+						int corI = 0;
+						boolean corFlag = true;
+						studentlist.add(stdobj);
+						techlo.setStudentlist(studentlist);
+						student stdlo = techlo.getStudentlist().get(stuI);
 
-								if (Press.equals("yes")) {
-									choosen = true;
-									
-								} else if (Press.equals("no")) {
-									choosen = false;
+						System.out.println("pls enter a  student name ?");
+						stdlo.setName(s.nextLine());
+						
+						
+						
+						
+						
+
+						while (corFlag) {
+							System.out.println("first mark");
+							ArrayList<Mark> marklist = new ArrayList<>();
+							Mark markobj = new Mark();
+							boolean markFlag = true;
+							int markI = 0;
+							Courselist.add(corobj);
+							stdlo.setCourselist(Courselist);
+							course corlo = stdlo.getCourselist().get(corI);
+							System.out.println("pls enter a  course name ?");
+							corlo.setName(s.nextLine());
+							
+							
+							
+							
+				
+							
+
+							while (markFlag) {
+								marklist.add(markobj);
+								corlo.setMarklist(marklist);
+								Mark mo = corlo.getMarklist().get(markI);
+								System.out.println("pls enter a  mark name ?");
+								mo.setSubjectName(s.nextLine());
+								
+							
+								
+
+								System.out.println("do you want to add mark? yes/no");
+								if (s.nextLine().equals("yes")) {
+									markI++;
+								} else {
+									markFlag = false;
 								}
 							}
-							System.out.println("Do you want to add new student? yes/no");
-							String Input = scanner.next();
-
-							if (Input.equals("yes")) {
-								optional = true;
-								
-							} else if (Input.equals("no")) {
-								optional = false;
+							System.out.println("do you want to add course? yes/no");
+							if (s.nextLine().equals("yes")) {
+								corI++;
+							} else {
+								corFlag = false;
 							}
-						}//Student
-						System.out.println("Do you want to add new teacher? yes/no");
-						String put = scanner.next();
-						if (put.equals("yes")) {
-							choose = true;
-							 
-							
-						} 
-						else if (put.equals("no")) {
-							choose = false;
-							
 						}
-					}//Teacher		
-					System.out.println("Do you want to add new Department? yes/no");
-					String put = scanner.next();
-					if (put.equals("yes")) {
-						option = true;
-						
-						
-					} 
-					else if (put.equals("no")) {
-						System.out.println("thank you");
-						option = false;
-						
+						System.out.println("do you want to add student? yes/no");
+						if (s.nextLine().equals("yes")) {
+							stuI++;
+						} else {
+							stuFlag = false;
+						}
 					}
-				}//Department 
-				
-					
-				for (school S : schoolelist) {
-					System.out.println("scool name:" + S.getName());
-				
-
-				for (Department D : S.getDepartmentList()) {
-					System.out.println("department name:" + D.getName());
-				
-
-				for (Teacher T : D.getTeacherlist()) {
-					System.out.println("teacher name:" + T.getName());
-				
-
-				for (student Ss : T.getStudentlist()) {
-					System.out.println("student name:" + Ss.getName());
-				
-
-				for (course C : Ss.getCourselist()) {
-					System.out.println("course name:" + C.getName());
-				
-
-				for (Mark M : C.getMarklist()) {
-					System.out.println("subject name:" + M.getSubjectName());
+					System.out.println("do you want to add teacher? yes/no");
+					if (s.nextLine().equals("yes")) {
+						teaI++;
+					} else {
+						teacherFlag = false;
+					}
 				}
-				
-		
-					
-						
-					
+				System.out.println("do you want to add department ? yes/no");
+				if (s.nextLine().equals("yes")) {
+					depI++;
+				} else {
+					depFlag = false;
 				}
+			}
 
-			}}}}}
-
-									
-	
-		for (int i = 0; i <=st.size(); i++) {
-			System.out.println(	st.pop());
-		
-			
+			System.out.println("do you want to add school? yes/no");
+			if (s.nextLine().equals("yes")) {
+				schI++;
+				schFlag = true;
+			} else {
+				schFlag = false;
+			}
 		}
 		
-	
-	
-	}}
+for(school ss:schoolList) {
+	System.out.println();
+	System.out.println("school name :"+ss.getName());
+	for(Department d :ss.getDepartmentList()) {
+		System.out.println();
+		System.out.println("Department name :"+d.getName());
+		for(Teacher t :d.getTeacherlist()) {
+			System.out.println();
+			System.out.println("Teacher name :"+t.getName());
+			for(student st:t.getStudentlist()) {
+				System.out.println();
+				System.out.println("student name :"+st.getName()) ;
+				for(course c:st.getCourselist()) {
+					System.out.println();
+					System.out.println("course name :"+ c.getName());
+					for(Mark m:c.getMarklist()) {
+						System.out.println();
+						System.out.println("Mark subject name :"+m.getSubjectName());
+					}	
+				}
+			}
+		}
+	}
+}
+	}
+}
+
 
 	
 
