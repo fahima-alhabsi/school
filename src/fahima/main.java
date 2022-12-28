@@ -15,11 +15,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.*;
+import java.io.*;
+
+
+
 public class main {
 	
+	
 
-
-	public static void main(String[] args) throws IOException, ClassNotFoundException  {
+	public static void main(String[] args) throws IOException, ClassNotFoundException,FileNotFoundException  {
 		
 		File ff = new File("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
 		FileWriter FW = new FileWriter("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
@@ -45,6 +50,35 @@ public class main {
 
 		ObjIS.close();
 		FIS.close();
+
+		
+	      String[] words=null;  
+	      BufferedReader br = new BufferedReader(new FileReader ("C:\\Users\\HP\\eclipse-workspace\\fahima\\search.txt")); 
+	      String s;     
+	      String input="java";   
+	      int count=0;   
+	      while((s=br.readLine())!=null)   
+	      {
+	         words=s.split(" ");  
+	          for (String word : words) 
+	          {
+	                 if (word.equals(input))   
+	                 {
+	                   count++;    
+	                 }
+	          }
+	      }
+	      if(count!=0)  
+	      {
+	         System.out.println("The given word is present for "+count+ " Times in the file");
+	      }
+	      else
+	      {
+	         System.out.println("The given word is not present in the file");
+	      }
+	      
+	         br.close();
+
 
 
 
@@ -196,7 +230,7 @@ public class main {
 					}
 				}//Department 
 				
-					
+		
 				for (school S : schoolelist) {
 					System.out.println("school name:" + S.getName());
 				FW.write("school name:  " + S.getName()+ "\n");
@@ -253,9 +287,6 @@ public class main {
 		return null;
 	}}
 
-	
-
-	
 
 	
 
