@@ -26,6 +26,11 @@ public class main {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException,FileNotFoundException  {
 		
+	     Scanner scanner = new Scanner(System.in);
+		
+		
+		
+		
 		File ff = new File("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
 		FileWriter FW = new FileWriter("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
 		
@@ -52,10 +57,18 @@ public class main {
 		FIS.close();
 
 		
+		
+		
+		
+		
+		
+		
+		
 	      String[] words=null;  
 	      BufferedReader br = new BufferedReader(new FileReader ("C:\\Users\\HP\\eclipse-workspace\\fahima\\search.txt")); 
-	      String s;     
-	      String input="java";   
+	      String s;  
+	      System.out.println("write word you want to search for ");
+	      String input=scanner.nextLine();   
 	      int count=0;   
 	      while((s=br.readLine())!=null)   
 	      {
@@ -81,8 +94,14 @@ public class main {
 
 
 
+	         
+	         
+	         
+	         
+	         
+	         
 
-       Scanner scanner = new Scanner(System.in);
+  
 		
 
 		ArrayList<school> schoolelist = new ArrayList<school>();
