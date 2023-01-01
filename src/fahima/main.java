@@ -23,9 +23,12 @@ import java.io.*;
 public class main {
 	
 	
-
-	public static void main(String[] args) throws IOException, ClassNotFoundException,FileNotFoundException  {
+	 public static void  main(String[] args) throws Throwable, IOException, ClassNotFoundException,FileNotFoundException {
 		
+		 finalize f = new finalize();
+		    f.finalize();
+		    
+		    
 	     Scanner scanner = new Scanner(System.in);
 		
 		
@@ -55,13 +58,6 @@ public class main {
 
 		ObjIS.close();
 		FIS.close();
-
-		
-		
-		
-		
-		
-		
 		
 		
 	      String[] words=null;  
