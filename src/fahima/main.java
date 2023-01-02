@@ -89,17 +89,6 @@ public class main {
 	         br.close();
 
 
-
-	         
-	         
-	         
-	         
-	         
-	         
-
-  
-		
-
 		ArrayList<school> schoolelist = new ArrayList<school>();
 		school muscat = new school();
 
