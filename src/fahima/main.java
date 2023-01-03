@@ -28,12 +28,55 @@ public class main {
 		 finalize f = new finalize();
 		    f.finalize();
 		    
-		    
+		   
 	     Scanner scanner = new Scanner(System.in);
+	     
+	   
+	     //this steps for serialization for class mark
+	     
+	     try {
+	    	Mark mark = new Mark();
+	    	System.out.println("Enter Subject Name");
+	    	String subName = scanner.nextLine();
+	    	mark.setSubjectName(subName);
+				
+		   FileOutputStream fileOut = new  FileOutputStream("Subject.txt"); 
+		   ObjectOutputStream objectOut = new ObjectOutputStream (fileOut);
+		   System.out.println("serialization has been excuted");
+		   objectOut.writeObject(mark);
+
+		   objectOut.flush();
+		   objectOut.close();
+		
+		  
+		   
+		    } 
+		    catch (Exception e) {
+		    	 e.getMessage();
+		    } 
 		
 		
+	     
+	     
+	     try {
+	    	 ObjectInputStream objectIn = new ObjectInputStream (new FileInputStream ("Subject.txt"));
+	    	
+	    	 Mark object = (Mark)objectIn.readObject() ;
+	    	 System.out.println("deserialization has been excuted");
+	    	System.out.println("Subject Name: " + object.getSubjectName());
+	    	
+		    } 
+		    catch (Exception e) {
+		    	 e.getMessage();
+		    } 
+		
+	     
+	     
+	     // the serialization till here 
+	     
 		
 		
+	     // here is to open file and make search for the word
 		File ff = new File("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
 		FileWriter FW = new FileWriter("C:\\Users\\HP\\eclipse-workspace\\fahima\\f.txt");
 		
@@ -89,6 +132,11 @@ public class main {
 	         br.close();
 
 
+	         
+	          // till here is the search
+	         
+	         
+	         
 		ArrayList<school> schoolelist = new ArrayList<school>();
 		school muscat = new school();
 

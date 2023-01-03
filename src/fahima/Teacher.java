@@ -1,5 +1,6 @@
 package fahima;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -10,7 +11,7 @@ public  class Teacher {
 	int studentlistlength;
 	
 	
-	
+	// here is the constructor
 	Teacher(String name , int age){
 		System.out.println("name: "+name +"  age: "+age);
 		}
